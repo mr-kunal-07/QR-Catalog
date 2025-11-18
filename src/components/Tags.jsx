@@ -14,7 +14,7 @@ const Tags = () => {
     const [selectedTag, setSelectedTag] = useState(1)
 
     return (
-        <div className='w-full py-6'>
+        <div className='w-full py-5'>
             <div
                 className='overflow-x-auto px-4'
                 style={{
@@ -35,7 +35,7 @@ const Tags = () => {
                             onClick={() => setSelectedTag(category.id)}
                             className={`
                                 group flex flex-col gap-1 items-center 
-                                border-2 p-2 rounded-lg shrink-0
+                                border-2 p-2 rounded-sm shrink-0
                                 cursor-pointer transition-all duration-500 ease-out
                                 hover:shadow-lg hover:-translate-y-1
                                 ${selectedTag === category.id
@@ -44,7 +44,7 @@ const Tags = () => {
                                 }
                             `}
                         >
-                            <div className='relative w-20 h-20 rounded-lg overflow-hidden'>
+                            {/* <div className='relative w-16 h-16 rounded-lg overflow-hidden'>
                                 <img
                                     src={category.image}
                                     alt={category.name}
@@ -56,7 +56,7 @@ const Tags = () => {
                                         }
                                     `}
                                 />
-                            </div>
+                            </div> */}
                             <p className={`
                                 text-sm font-medium text-center transition-all duration-500
                                 ${selectedTag === category.id
