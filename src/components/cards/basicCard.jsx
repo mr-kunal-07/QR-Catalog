@@ -44,12 +44,12 @@ const ProductGrid = ({ products = [] }) => {
 
     return (
         <div className="w-full max-w-6xl mx-auto p-4 pt-0">
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-3">
                 {items.map((item) => (
                     <a
                         key={item.id}
                         href={item.link}
-                        className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                        className="group bg-white rounded-md shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                     >
                         {/* Image Container */}
                         <div className="relative aspect-3/4 overflow-hidden bg-gray-50">
@@ -63,20 +63,20 @@ const ProductGrid = ({ products = [] }) => {
 
                         {/* Content */}
                         <div className="p-4">
-                            <div className="flex justify-between items-start mb-2">
+                            <div className="flex justify-between items-start">
                                 <span className="text-xl font-bold text-gray-900">
                                     {item.price}
                                 </span>
                                 <button
                                     onClick={(e) => toggleFavorite(item.id, e)}
-                                    className={`p-2 rounded-full transition-colors ${favorites[item.id]
-                                        ? 'text-red-500 bg-red-50'
-                                        : 'text-gray-400 hover:bg-gray-100'
+                                    className={`p-2 pt-0 rounded-full transition-colors ${favorites[item.id]
+                                        ? 'text-red-500'
+                                        : 'text-gray-400 '
                                         }`}
                                     aria-label={favorites[item.id] ? 'Remove from favorites' : 'Add to favorites'}
                                 >
                                     <Heart
-                                        size={24}
+                                        size={26}
                                         fill={favorites[item.id] ? 'currentColor' : 'none'}
                                     />
                                 </button>
