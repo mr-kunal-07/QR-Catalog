@@ -9,7 +9,6 @@ const ProductGrid = ({ products = [] }) => {
             id: 1,
             image: 'https://myraymond.com/cdn/shop/files/RMDX02322-K8-2.jpg?v=1729163989',
             title: 'Men Black Blend Suit',
-            description: 'Raymond Men Black Structure Contemporary Fit Polyester Blend Suit',
             price: 'Rs.10,534',
             link: '/'
         },
@@ -17,7 +16,6 @@ const ProductGrid = ({ products = [] }) => {
             id: 2,
             image: 'https://myraymond.com/cdn/shop/files/RIDH00808-R4-2.jpg?v=1725601288',
             title: 'Men Red Blend Suit',
-            description: 'Raymond Men Red Structured Regular Fit Polyester Blend Suit',
             price: 'Rs.20,016',
             link: '/'
         },
@@ -25,7 +23,6 @@ const ProductGrid = ({ products = [] }) => {
             id: 3,
             image: 'https://myraymond.com/cdn/shop/files/RMDX02366-G8-2.jpg?v=1744822850',
             title: 'Men Grey Solid Suit',
-            description: 'Raymond Men Grey Solid Contemporary Fit Polyester Blend Suit',
             price: 'Rs.12,999',
             link: '/'
         }
@@ -55,7 +52,7 @@ const ProductGrid = ({ products = [] }) => {
                         <div className="relative aspect-3/4 overflow-hidden bg-gray-50">
                             <img
                                 src={item.image}
-                                alt={item.description || item.title}
+                                alt={item.title}
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 loading="lazy"
                             />
@@ -81,7 +78,7 @@ const ProductGrid = ({ products = [] }) => {
                                     />
                                 </button>
                             </div>
-                            <h3 className="text-sm font-medium text-gray-700 line-clamp-2">
+                            <h3 className="text-sm font-medium text-gray-700">
                                 {item.title}
                             </h3>
                         </div>
