@@ -48,7 +48,7 @@ const ProductGrid = ({ products = [] }) => {
                 {items.map((item) => (
                     <a
                         key={item.id}
-                        href={item.link}
+                        // href={item.link}
                         className="group bg-white rounded-md shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                     >
                         {/* Image Container */}
